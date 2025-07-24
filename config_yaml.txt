@@ -1,0 +1,288 @@
+# AI Policy Data Sources Configuration
+# Configuration file for different government and institutional sources
+
+# Request settings
+request_settings:
+  delay: 2  # seconds between requests
+  timeout: 30  # request timeout in seconds
+  max_retries: 3
+  user_agent: "AI-Policy-Research-Bot/1.0"
+
+# Data sources by country/region
+sources:
+  algeria:
+    name: "Republic of Algeria"
+    base_url: "https://www.joradp.dz/"
+    alternative_urls:
+      - "https://www.mcinet.gov.dz/"
+      - "https://www.mpt.gov.dz/"
+    search_patterns:
+      - "/recherche"
+      - "/documents"
+      - "/textes-reglementaires"
+    language: "ar"
+    secondary_language: "fr"
+    document_types:
+      - "decree"
+      - "law" 
+      - "strategy"
+      - "guideline"
+    ai_keywords_arabic:
+      - "الذكاء الاصطناعي"
+      - "التعلم الآلي"
+      - "الخوارزميات"
+      - "التقنيات الذكية"
+    ai_keywords_french:
+      - "intelligence artificielle"
+      - "apprentissage automatique"
+      - "algorithmes"
+      - "technologies intelligentes"
+    priority: "high"
+    
+  eu:
+    name: "European Union"
+    base_url: "https://digital-strategy.ec.europa.eu/"
+    alternative_urls:
+      - "https://ec.europa.eu/info/strategy/"
+      - "https://eur-lex.europa.eu/"
+    search_patterns:
+      - "/policies/artificial-intelligence"
+      - "/policies/digital-single-market"
+      - "/library/ethics-guidelines-trustworthy-ai"
+    language: "en"
+    secondary_language: "fr"
+    document_types:
+      - "regulation"
+      - "directive" 
+      - "guideline"
+      - "white_paper"
+      - "communication"
+    ai_keywords:
+      - "artificial intelligence"
+      - "machine learning"
+      - "algorithmic"
+      - "automated decision"
+      - "trustworthy AI"
+      - "AI Act"
+    priority: "high"
+    
+  usa:
+    name: "United States of America"
+    base_url: "https://www.whitehouse.gov/"
+    alternative_urls:
+      - "https://www.nist.gov/"
+      - "https://www.ftc.gov/"
+      - "https://www.commerce.gov/"
+    search_patterns:
+      - "/briefing-room/presidential-actions"
+      - "/ostp/ai-bill-of-rights"
+      - "/ai"
+    language: "en"
+    document_types:
+      - "executive_order"
+      - "policy"
+      - "guideline"
+      - "framework"
+      - "bill_of_rights"
+    ai_keywords:
+      - "artificial intelligence"
+      - "machine learning"
+      - "algorithmic accountability"
+      - "automated systems"
+      - "AI Bill of Rights"
+      - "responsible AI"
+    priority: "high"
+    
+  canada:
+    name: "Canada"
+    base_url: "https://www.canada.ca/"
+    alternative_urls:
+      - "https://www.ic.gc.ca/"
+      - "https://www.priv.gc.ca/"
+    search_patterns:
+      - "/en/innovation-science-economic-development"
+      - "/en/privacy-commissioner"
+      - "/artificial-intelligence"
+    language: "en"
+    secondary_language: "fr"
+    document_types:
+      - "policy"
+      - "guideline"
+      - "framework"
+      - "consultation"
+    ai_keywords:
+      - "artificial intelligence"
+      - "machine learning"
+      - "automated decision-making"
+      - "algorithmic impact assessment"
+      - "privacy by design"
+    ai_keywords_french:
+      - "intelligence artificielle"
+      - "apprentissage automatique"
+      - "prise de décision automatisée"
+    priority: "medium"
+    
+  uk:
+    name: "United Kingdom"
+    base_url: "https://www.gov.uk/"
+    alternative_urls:
+      - "https://www.gov.uk/government/organisations/office-for-artificial-intelligence"
+      - "https://www.gov.uk/government/organisations/centre-for-data-ethics-and-innovation"
+    search_patterns:
+      - "/government/publications"
+      - "/guidance/artificial-intelligence"
+      - "/ai-regulation"
+    language: "en"
+    document_types:
+      - "white_paper"
+      - "guidance"
+      - "consultation"
+      - "response"
+    ai_keywords:
+      - "artificial intelligence"
+      - "machine learning"
+      - "algorithmic decision-making"
+      - "AI regulation"
+      - "trustworthy AI"
+    priority: "medium"
+    
+  singapore:
+    name: "Singapore"
+    base_url: "https://www.smartnation.gov.sg/"
+    alternative_urls:
+      - "https://www.pdpc.gov.sg/"
+      - "https://www.imda.gov.sg/"
+    search_patterns:
+      - "/initiatives/artificial-intelligence"
+      - "/ai-governance"
+    language: "en"
+    document_types:
+      - "framework"
+      - "guideline"
+      - "standards"
+    ai_keywords:
+      - "artificial intelligence"
+      - "AI governance"
+      - "responsible AI"
+      - "AI ethics"
+    priority: "medium"
+
+# Analysis parameters
+analysis_parameters:
+  # AI principles framework
+  ai_principles:
+    fairness:
+      weight: 1.0
+      required_keywords: 2  # minimum keyword matches
+      context_window: 50    # words around keyword
+    transparency:
+      weight: 1.0
+      required_keywords: 2
+      context_window: 50
+    accountability:
+      weight: 1.0
+      required_keywords: 2
+      context_window: 50
+    privacy:
+      weight: 1.0
+      required_keywords: 2
+      context_window: 50
+    human_oversight:
+      weight: 1.0
+      required_keywords: 1
+      context_window: 50
+    robustness:
+      weight: 1.0
+      required_keywords: 2
+      context_window: 50
+    non_maleficence:
+      weight: 1.0
+      required_keywords: 1
+      context_window: 50
+
+  # Scoring thresholds
+  thresholds:
+    high_coverage: 0.7
+    medium_coverage: 0.4
+    low_coverage: 0.1
+    gap_threshold: 0.1
+
+  # Document classification
+  classification:
+    confidence_threshold: 0.6
+    min_document_length: 100  # words
+    max_preview_length: 1000  # characters
+
+# Output settings
+output_settings:
+  formats:
+    - "json"
+    - "csv" 
+    - "excel"
+  include_metadata: true
+  include_full_text: false  # for privacy/copyright
+  compress_outputs: false
+  
+  # Visualization settings
+  visualization:
+    chart_style: "seaborn"
+    color_palette: "viridis"
+    figure_size: [12, 8]
+    dpi: 300
+    save_formats: ["png", "pdf"]
+
+# Multilingual support
+languages:
+  arabic:
+    code: "ar"
+    direction: "rtl"
+    encoding: "utf-8"
+    stop_words: ["في", "من", "إلى", "على", "أن", "هذا", "هذه"]
+  french:
+    code: "fr" 
+    direction: "ltr"
+    encoding: "utf-8"
+    stop_words: ["le", "de", "et", "à", "un", "il", "être", "et"]
+  english:
+    code: "en"
+    direction: "ltr" 
+    encoding: "utf-8"
+    stop_words: ["the", "and", "or", "but", "in", "on", "at", "to"]
+
+# Data quality settings
+quality_control:
+  min_relevance_score: 0.3
+  max_duplicate_similarity: 0.9
+  content_filters:
+    - "spam"
+    - "advertisement"
+    - "navigation"
+  validation_rules:
+    - "has_title"
+    - "has_content"
+    - "valid_url"
+    - "ai_related"
+
+# Caching and performance
+performance:
+  enable_caching: true
+  cache_duration: 86400  # 24 hours in seconds
+  parallel_requests: 3
+  batch_size: 10
+  memory_limit: "2GB"
+
+# Error handling
+error_handling:
+  max_retry_attempts: 3
+  retry_delay: 5  # seconds
+  continue_on_error: true
+  log_errors: true
+  error_log_file: "logs/scraping_errors.log"
+
+# Legal and ethical guidelines
+compliance:
+  robots_txt_respect: true
+  rate_limiting: true
+  attribution_required: true
+  copyright_notice: "Content scraped for academic research purposes under fair use"
+  data_retention_days: 365
