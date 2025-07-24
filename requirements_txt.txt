@@ -1,0 +1,72 @@
+# AI Policy Data Collection & Analysis Toolkit
+# Requirements file for the project
+
+# Core data manipulation and analysis
+pandas>=1.5.0
+numpy>=1.21.0
+
+# Web scraping and HTTP requests
+requests>=2.28.0
+beautifulsoup4>=4.11.0
+lxml>=4.9.0
+
+# Data visualization
+matplotlib>=3.5.0
+seaborn>=0.11.0
+plotly>=5.10.0
+
+# Configuration and data formats
+pyyaml>=6.0
+python-dateutil>=2.8.0
+
+# Natural Language Processing (optional, for advanced text analysis)
+nltk>=3.7
+spacy>=3.4.0
+
+# PDF processing (optional, for PDF document analysis)
+PyPDF2>=3.0.0
+pdfplumber>=0.7.0
+
+# Excel file support (optional)
+openpyxl>=3.0.0
+xlrd>=2.0.0
+
+# Jupyter notebook support
+jupyter>=1.0.0
+ipykernel>=6.0.0
+notebook>=6.4.0
+
+# Testing and development
+pytest>=7.0.0
+pytest-cov>=3.0.0
+
+# Progress bars and logging
+tqdm>=4.64.0
+
+# HTTP session management
+requests-cache>=0.9.0
+
+# Data validation
+jsonschema>=4.0.0
+
+# Statistical analysis
+scipy>=1.9.0
+scikit-learn>=1.1.0
+
+# Web scraping utilities
+selenium>=4.0.0  # For dynamic content scraping (optional)
+scrapy>=2.6.0    # Alternative scraping framework (optional)
+
+# Text processing and cleaning
+python-magic>=0.4.0  # File type detection
+chardet>=5.0.0       # Character encoding detection
+
+# API integrations (optional)
+python-dotenv>=0.19.0  # Environment variable management
+
+# Documentation generation
+sphinx>=5.0.0
+sphinx-rtd-theme>=1.0.0
+
+# Version information
+# Python >= 3.8 required
