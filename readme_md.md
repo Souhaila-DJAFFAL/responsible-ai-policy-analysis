@@ -21,36 +21,6 @@ A comprehensive toolkit for collecting, processing, and analyzing AI governance 
 - **Regulatory Landscape Mapping**: Visualize the global AI governance ecosystem
 - **Compliance Assessment**: Evaluate policy alignment with international frameworks
 
-## 🛠️ Installation
-
-### Prerequisites
-- Python 3.8 or higher
-- pip package manager
-
-### Setup
-
-1. **Clone the repository**
-```bash
-git clone https://github.com/yourusername/ai-governance-data-toolkit.git
-cd ai-governance-data-toolkit
-```
-
-2. **Create virtual environment**
-```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-```
-
-3. **Install dependencies**
-```bash
-pip install -r requirements.txt
-```
-
-4. **Set up directories**
-```bash
-mkdir -p datasets outputs config
-```
-
 ## 🚦 Quick Start
 
 ### 1. Basic Policy Collection
@@ -137,31 +107,12 @@ Currently supports policy collection from:
 - 🇺🇸 **United States** (English)
 - 🇨🇦 **Canada** (English/French)
 
-*Expanding to more countries - contributions welcome!*
-
-## 📚 Documentation
-
-- [Methodology](docs/methodology.md) - Analysis framework and approach
-- [Data Collection Guide](docs/data_collection_guide.md) - Best practices for gathering policy documents
-- [API Reference](docs/api_reference.md) - Detailed function documentation
-
-## 🤝 Contributing
-
-Contributions are welcome! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
-
-### Areas for Contribution:
-- **Additional Countries**: Add support for more jurisdictions
-- **Language Support**: Extend multilingual capabilities
-- **Analysis Methods**: Enhance analytical frameworks
-- **Visualization**: Improve charts and reports
-- **Documentation**: Expand guides and examples
-
 
 
 ## 📞 Contact
 
 **Souhaila Djaffal**
 - 📧 Email: souhaila.djaffal@univ-tebessa.dz
-- 🔗 LinkedIn: [souhaila-djaffal](https://linkedin.com/in/souhaila-djaffal)
-- 🐙 GitHub: [@souhaila-djaffal](https://github.com/souhaila-djaffal)
+- 🔗 LinkedIn: [souhaila-djaffal](https://www.linkedin.com/in/souhaila-djaffal-889661b8/)
+- 🐙 GitHub: [@souhaila-djaffal](https://github.com/Souhaila-DJAFFAL)
 
