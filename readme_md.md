@@ -87,11 +87,6 @@ coverage_matrix = mapper.generate_coverage_matrix(analysis['documents'])
 print(coverage_matrix)
 ```
 
-### 3. Run the Demo Notebook
-
-```bash
-jupyter notebook notebooks/01_data_collection_demo.ipynb
-```
 
 ## 📊 Analysis Framework
 
@@ -107,40 +102,7 @@ The toolkit analyzes policies across seven key responsible AI principles:
 | **Robustness** | Safety, security, and reliability | robustness, reliability, safety, security |
 | **Non-maleficence** | Harm prevention and risk mitigation | harm, risk, safety, protection |
 
-## 📁 Project Structure
 
-```
-ai-governance-data-toolkit/
-├── README.md
-├── requirements.txt
-├── config/
-│   ├── data_sources.yaml         # Data source configurations
-│   └── analysis_parameters.json   # Analysis parameters
-├── data_collection/
-│   ├── policy_scraper.py         # Main scraping module
-│   ├── document_classifier.py    # Document type classification
-│   └── utils/                    # Utility functions
-├── data_processing/
-│   ├── document_parser.py        # Text processing
-│   └── comparative_analyzer.py   # Cross-country analysis
-├── analysis/
-│   ├── policy_framework_mapper.py # Framework analysis
-│   ├── gap_analysis.py           # Gap identification
-│   └── visualization.py          # Plotting utilities
-├── datasets/
-│   ├── sample_policies/          # Sample policy documents
-│   └── processed_data/           # Processed datasets
-├── notebooks/
-│   ├── 01_data_collection_demo.ipynb
-│   ├── 02_policy_classification.ipynb
-│   └── 03_comparative_analysis.ipynb
-├── outputs/
-│   ├── reports/                  # Generated reports
-│   └── visualizations/           # Charts and graphs
-└── docs/
-    ├── methodology.md            # Analysis methodology
-    └── data_collection_guide.md  # Collection guidelines
-```
 
 ## 🔧 Configuration
 
@@ -160,16 +122,6 @@ sources:
     base_url: "https://www.whitehouse.gov/"
     search_patterns: ["/briefing-room/presidential-actions", "/ai"]
     language: "en"
-```
-
-## 📈 Sample Outputs
-
-### Coverage Matrix
-```
-country     fairness  transparency  accountability  privacy  human_oversight  robustness
-algeria     0.245     0.180         0.320          0.290    0.150           0.200
-eu          0.450     0.520         0.480          0.620    0.380           0.420
-usa         0.380     0.420         0.360          0.450    0.320           0.310
 ```
 
 ### Gap Analysis Report
@@ -206,9 +158,7 @@ Contributions are welcome! Please see our [Contributing Guidelines](CONTRIBUTING
 - **Visualization**: Improve charts and reports
 - **Documentation**: Expand guides and examples
 
-## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 📞 Contact
 
@@ -217,25 +167,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - 🔗 LinkedIn: [souhaila-djaffal](https://linkedin.com/in/souhaila-djaffal)
 - 🐙 GitHub: [@souhaila-djaffal](https://github.com/souhaila-djaffal)
 
-## 🙏 Acknowledgments
-
-- Turing College AI Ethics Course for framework inspiration
-- Global Index on Responsible AI initiative
-- Open source community for tools and libraries
-
-## 📊 Citation
-
-If you use this toolkit in your research, please cite:
-
-```bibtex
-@software{djaffal2025_ai_governance_toolkit,
-  author = {Djaffal, Souhaila},
-  title = {AI Governance Data Toolkit: A Framework for Analyzing Responsible AI Policies},
-  year = {2025},
-  url = {https://github.com/yourusername/ai-governance-data-toolkit}
-}
-```
-
----
-
-**⭐ Star this repository if you find it useful!**
